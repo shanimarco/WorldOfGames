@@ -1,5 +1,2 @@
-random
-forex_python.converter
-os
+forex_python
 flask
-time
