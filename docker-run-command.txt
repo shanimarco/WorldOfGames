@@ -1,1 +1,2 @@
+docker pull shanimarco/WorldOfGames:latest
 docker compose up
