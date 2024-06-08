@@ -8,11 +8,11 @@ node (){
     stage('Test') {
         parallel(
             run: {
-                bat 'docker run -p 8777:5001 --name wog world_of_games_image'
+                bat 'docker run -p 8777:5001 --name wog_container world_of_games_image'
             },
             test: {
                 bat 'python tests/e2e.py'
-                bat 'docker stop wog'
+                bat 'docker stop wog_container'
             }
         )
     }
