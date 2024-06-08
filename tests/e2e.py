@@ -1,12 +1,11 @@
 from selenium import webdriver
 driver = webdriver.Chrome()
 from time import sleep
-import requests
 
 def test_scores_service():
     driver.get("http://localhost:8777/worldOfGame")
     scor_val = int(driver.find_element(by="xpath", value="/html/body/h2").text)
-    sleep(2)
+    sleep(1)
     print(scor_val)
     driver.quit()
     if scor_val >=1 and scor_val <=1000:
