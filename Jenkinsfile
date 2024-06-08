@@ -16,4 +16,8 @@ node (){
             }
         )
     }
+    stage('Push'){
+        bat 'docker tag world_of_games_image shanimarco/world_of_games'
+        bat 'docker push shanimarco/world_of_games'
+    }
 }
