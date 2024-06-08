@@ -5,19 +5,6 @@ from flask import render_template
 
 app = Flask("game")
 
-# @app.route('/shutdown', methods=['POST'])
-# def shutdown():
-#    print("Shutting down gracefully...")
-#    os.kill(os.getpid(), signal.SIGINT)
-#    return 'Server shutting down...'
-
-
-@app.route('/stopServer', methods=['GET'])
-def stopServer():
-    os.kill(os.getpid(), signal.SIGINT)
-    return jsonify({ "success": True, "message": "Server is shutting down..." })
-
-
 @app.route('/worldOfGame', methods=['GET'])
 def score_server():
         try:
