@@ -6,6 +6,6 @@ node (){
           bat 'docker build -t world_of_games_image .'
        }
     stage('run image') {
-          bat 'docker run world_of_games_image'
+          bat 'docker run -p 8777:5001 world_of_games_image'
        }
 }
